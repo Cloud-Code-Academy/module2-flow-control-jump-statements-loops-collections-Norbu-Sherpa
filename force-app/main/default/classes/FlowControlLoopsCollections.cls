@@ -130,6 +130,13 @@ public static String checkEvenOdd(Integer a) {
      * @return A string indicating whether the input is "Empty", "Null", or "Contains Text".
      */
     public static String checkString(String a) {
+        if (a == ''){
+            return 'Empty';
+         } else if( a == null){
+            return 'Null';
+        } else if(a != '' || a != null){
+            return 'Contains Text';
+        }
         return null; // Replace null with the variable you used to store the result
     }
 
@@ -146,9 +153,18 @@ public static String checkEvenOdd(Integer a) {
      * @return The grade for the given score.
      */
     public static String determineGrade(Integer score) {
-        return null; // Replace null with the variable you used to store the result
+        if (score >= 90){
+            return 'Grade A';
+        }else if (score >= 80){
+            return 'Grade B';
+        }else if (score >= 70){
+            return 'Grade C';
+        }else if (score >= 60){
+            return 'Grade D';
+        } else {
+            return 'Grade F'; 
+        }
     }
-
 
     /**
      * Question 8

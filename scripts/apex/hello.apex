@@ -5,12 +5,13 @@
 // You can also execute the entire file by running the command:
 //     SFDX: Execute Anonymous Apex with Editor Contents
 
-    public static String returnHelloWorld() {
-        String result = '';
-        for (Integer i = 0; i <= 2; i++ ){
-            result += 'Hello World!;';
-            System.assert(result.containsWhitespace());
+ List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
+        Integer ListCount = numbers.Size();
+        
+        for (Integer i = 0; i <=ListCount; i ++)
+        if ( i < 0){
+            numbers.remove(i);
         }
-        System.debug(result);
-        return result;
-    }
+          return numbers;
+        
+    

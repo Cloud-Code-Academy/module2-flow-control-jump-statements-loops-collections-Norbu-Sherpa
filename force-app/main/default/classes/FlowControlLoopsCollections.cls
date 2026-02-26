@@ -296,13 +296,15 @@ public static Set<String> createStringSet(List<String> inputList) {
      */
     public static Integer sumPositiveIntegers() {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
-
-        // Loop through the list of integers
-            // if the number is negative skip this iteration
-        
-
-        return null; // Replace null with the variable you used to store the result
+        Integer sum = 0;
+        for (Integer i : numbers){
+            if(i >= 0){
+                sum += i;
+            }
+        }
+        return sum;
     }
+
 
     /**
      * Question 16

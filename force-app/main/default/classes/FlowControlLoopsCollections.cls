@@ -281,15 +281,13 @@ public static String checkEvenOdd(Integer a) {
      * @param inputList The List of strings.
      * @return A Set of unique strings.
      */
-    public static Set<String> createStringSet(List<String> inputList) {
-        // Create a new Set of strings
-        Set<String> stringSet = new Set<String>();
-
-        //add strings to the set
-
-        return null; // Replace null with the variable you used to store the result
-    }
-
+public static Set<String> createStringSet(List<String> inputList) {
+    // Create a new Set of strings
+    Set<String> stringSet = new Set<String>();
+    //add strings to the set
+    stringSet.addAll(inputList);
+    return stringSet; 
+}
     /**
      * Question 15
      * Iterates over a list of integers and sums only the positive integers.

@@ -29,8 +29,18 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        return null; // Replace null with the variable you used to store the result
+        if (x == null || y == null || x < y) {
+            return null;
+        }
+         if (x > y) {
+            return 'Hello World!';   
+        }
+        if ( x == y){
+            return 'Both numbers are equal';
+        }
+        return null;
     }
+
 
     /**
      * Question 2
@@ -42,7 +52,11 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        return null; // Replace null with the variable you used to store the result
+        if ( age >= 18) {
+            return true;
+        }
+        else
+            return false;
     }
 
     /**
@@ -54,12 +68,20 @@ public with sharing class FlowControlLoopsCollections {
      * @param num2 The second number.
      * @return The maximum of the two numbers, or null if either number is null.
      */
-    public static Integer findMax(Integer num1, Integer num2) {
-        // Initialize largestNum as null
-        Integer largestNum = null;
-
-        return null; // Replace null with the variable you used to store the result
+public static Integer findMax(Integer num1, Integer num2) {
+    if (num1 == null || num2 == null) {
+        return null;
     }
+
+    Integer largestNum;
+
+    if (num1 > num2) {
+        largestNum = num1;
+    } else {
+        largestNum = num2;
+    }
+    return largestNum;
+}
 
 
     /**
@@ -364,5 +386,4 @@ public with sharing class FlowControlLoopsCollections {
         // Return the list of high paid employees
         return null; // Replace null with the variable you used to store the result
     }
-
 }

@@ -112,9 +112,15 @@ public static String checkNumber(Integer a) {
      * @param a The number to check.
      * @return A string indicating whether the number is "Even" or "Odd", or null if the number is null.
      */
-    public static String checkEvenOdd(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+public static String checkEvenOdd(Integer a) {
+    if (a == null) {
+        return null;
+    } else if (Math.mod(a, 2) == 0) {
+        return 'Even';
+    } else {
+        return 'Odd';
     }
+}
 
     /**
      * Question 6

@@ -92,17 +92,17 @@ public static Integer findMax(Integer num1, Integer num2) {
      * @param a The number to check.
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
-public static String checkNumber(Integer a) {
-    if (a == null) {
-        return null;
-    } else if (a > 0) {
-        return 'Positive';
-    } else if (a < 0) {
-        return 'Negative';
-    } else { 
-        return 'Zero';
+    public static String checkNumber(Integer a) {
+        if (a == null) {
+            return null;
+        } else if (a > 0) {
+            return 'Positive';
+        } else if (a < 0) {
+            return 'Negative';
+        } else { 
+            return 'Zero';
+        }
     }
-}
 
     /**
      * Question 5
@@ -208,22 +208,22 @@ public static String checkEvenOdd(Integer a) {
      * @param repeatCount The number of times the string should be repeated.
      * @return The new string with the inputString repeated repeatCount times.
      */
-public static String repeatString(String inputString, Integer repeatCount) {
-    // Initialize the result String
-    String result = '';
+    public static String repeatString(String inputString, Integer repeatCount) {
+        // Initialize the result String
+        String result = '';
 
-    // Use a for loop to append the inputString to the result string repeatCount times
-    for (Integer i = 0; i < repeatCount; i++ ){
-        result += inputString;
+        // Use a for loop to append the inputString to the result string repeatCount times
+        for (Integer i = 0; i < repeatCount; i++ ){
+            result += inputString;
 
-        // If it is not the last iteration, add a semicolon to separate the strings
-        if(i < repeatCount - 1){
-            result += '; ';
+            // If it is not the last iteration, add a semicolon to separate the strings
+            if(i < repeatCount - 1){
+                result += '; ';
+            }
         }
+        System.debug(result);
+        return result; 
     }
-    System.debug(result);
-    return result; 
-}
 
     /**
      * Question 11
@@ -264,14 +264,13 @@ public static String repeatString(String inputString, Integer repeatCount) {
      */
     public static List<Integer> createIntegerList(Integer n) {
         // Create a new list of integers 
-
-        /*
-        for() {
+        List<Integer> numbers = new List<Integer>();
+        for(Integer i = 1; i <= n; i ++) {
             //add integer to the list
-        }
-        */ 
+            numbers.add(i);
 
-        return null; // Replace null with the variable you used to store the result
+        }
+        return numbers; // Replace null with the variable you used to store the result
     }
 
     /**

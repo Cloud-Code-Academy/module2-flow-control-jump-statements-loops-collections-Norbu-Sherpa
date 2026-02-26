@@ -233,14 +233,11 @@ public static String repeatString(String inputString, Integer repeatCount) {
      */
     public static List<Integer> createAndPopulateList() {
         // Create a new list of integers
-
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        // add 2
-        // add 3
-
-        // Return the populated list
-        return null; // Replace null with the variable you used to store the result
+      List<Integer> numbers = new List<Integer>();
+      numbers.add(1);
+      numbers.add(2);
+      numbers.add(3);
+        return numbers; // Replace null with the variable you used to store the result
     }
 
     /**

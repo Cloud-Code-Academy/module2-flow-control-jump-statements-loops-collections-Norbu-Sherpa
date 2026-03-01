@@ -72,10 +72,8 @@ public static Integer findMax(Integer num1, Integer num2) {
     if (num1 == null || num2 == null) {
         return null;
     }
-
     Integer largestNum;
-
-    if (num1 > num2) {
+    if (num1 >= num2) {
         largestNum = num1;
     } else {
         largestNum = num2;

@@ -370,18 +370,23 @@ public static Decimal countMoney() {
      * @return The salary of the employee, or null if the employee is not found in the Map.
      */
     public static Integer getSalary(String employeeName) {
-        // Initialize a Map
 
+        // Initialize a Map
+        Map<String, Integer> employeesMap = new Map<String, Integer>();
+        
         // Add key-value pairs to the Map
-        // add John Doe => 50000
-        // add Jane Smith => 60000
-        // add Sam Brown => 55000
-        // add Alice Johnson => 65000
+        employeesMap.put('John Doe', 50000);
+        employeesMap.put('Jane Smith', 60000);
+        employeesMap.put('Sam Brown', 55000);
+        employeesMap.put('Alice Johnson', 65000);
 
         // Get the salary of the employee
+        if (employeesMap.containsKey(employeeName)) {
+            return employeesMap.get(employeeName);
+        }
 
-        // Return the salary of the employee, or null if the employee is not found in the Map
-        return null; // Replace null with the variable you used to store the result
+        // Return null if the employee is not found in the Map
+        return null;
     }
 
     /**

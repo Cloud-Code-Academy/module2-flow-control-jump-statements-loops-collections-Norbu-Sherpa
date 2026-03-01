@@ -326,14 +326,23 @@ public static Integer findWordInList(String wordToFind, List<String> words) {
      * Example: countMoney() should return 48.02
      * @return The total value in dollars, stopped at the point when it exceeds 40 dollars.
      */
-    public static Decimal countMoney() {
-        // The list of money in the wallet, represented in dollars and cents
-        List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
-
-        return null; // Replace null with the variable you used to store the result
+public static Decimal countMoney() {
+    // The list of money in the wallet, represented in dollars and cents
+    List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; // DO NOT CHANGE
+    Decimal sum = 0.0;
+    
+    for (Decimal d : moneyInWallet) {
+        sum += d;
+        if (sum > 40) {
+            break;
+        }
     }
+    
+    return sum; // return as Decimal
+}
 
-    /**
+
+   /**
      * Question 18
      * Create a map that has five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
      * Example: addItemsToMap() should return "Apples => 5, Oranges => 10, Bananas => 15, Pears => 20, Grapes => 25"

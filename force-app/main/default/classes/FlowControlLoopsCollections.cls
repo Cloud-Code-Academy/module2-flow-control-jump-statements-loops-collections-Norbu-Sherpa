@@ -176,7 +176,6 @@ public static String checkEvenOdd(Integer a) {
     for (Integer i = 0; i <= intLimit; i++) {
         sum += i;
     }
-    System.debug('Sum = ' + sum);
     return sum;
 }
 
